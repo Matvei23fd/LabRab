@@ -2,7 +2,7 @@ students_performance = {
     "group_number": "12345",
     "students": [
         {
-            "full_name": "Іванов Іван Іванович",
+            "full_name": "Бойко Ольга Василівна",
             "course": 2,
             "subjects": {
                 "Математика": [5, 4, 5],
@@ -12,7 +12,7 @@ students_performance = {
             "average_grade": 4.5
         },
         {
-            "full_name": "Петренко Ольга Василівна",
+            "full_name": "Парфененко Юлія Вікторівна",
             "course": 1,
             "subjects": {
                 "Математика": [3, 4, 5],
@@ -23,3 +23,11 @@ students_performance = {
         }
     ]
 }
+print("Список студентів:")
+for student in students_performance['students']:
+    print(f"Прізвище та ім'я: {student['full_name']}")
+    print(f"Курс: {student['course']}")
+    print("Оцінки за предметами:")
+    for subject, grades in student['subjects'].items():
+        print(f"  {subject}: {grades}")
+    print(f"Середній бал: {student['average_grade']}\n")
